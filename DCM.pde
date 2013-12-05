@@ -271,12 +271,12 @@ void Matrix_update(void)
 void Euler_angles(void)
 {
   #if (OUTPUTMODE==2)         // Only accelerometer info (debugging purposes)
-    roll = atan2(Accel_Vector[1],Accel_Vector[2]);    // atan2(acc_y,acc_z)
-    pitch = -asin((Accel_Vector[0])/(double)GRAVITY); // asin(acc_x)
+    roll = 1.9*atan2(Accel_Vector[1],Accel_Vector[2]);    // atan2(acc_y,acc_z)
+    pitch = -1.9*asin((Accel_Vector[0])/(double)GRAVITY); // asin(acc_x)
     yaw = 0;
   #else
-    pitch = -asin(DCM_Matrix[2][0]);
-    roll = atan2(DCM_Matrix[2][1],DCM_Matrix[2][2]);
+    pitch = -1.9*asin(DCM_Matrix[2][0]);
+    roll = 1.9*atan2(DCM_Matrix[2][1],DCM_Matrix[2][2]);
     yaw = atan2(DCM_Matrix[1][0],DCM_Matrix[0][0]);
   #endif
 }
