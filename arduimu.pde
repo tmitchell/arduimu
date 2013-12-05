@@ -1,9 +1,10 @@
 // Released under Creative Commons License 
 // Code by Jordi Munoz and William Premerlani, Supported by Chris Anderson and Doug Weibel
-// Version 1.0 for flat board updated by Doug Weibel and Jose Julio
+// Version 1.0 for flat board updated by Doug Weibel, Jose Julio and Ahmad Byagowi
 // Version 1.7 includes support for SCP1000 absolute pressure sensor
 // Version 1.8 uses DIYDrones GPS, FastSerial, and Compass libraries
 // Version 1.9 Support for ArduIMU V3 Hardware with MPU6000 and HMC5883 magnetometer (SCP1000 absolute pressure sensor is not supported in this version)
+// Version 1.9.5 Works on Arduino 1.0.1 IDE
 
 // Axis definition: X axis pointing forward, Y axis pointing to the right and Z axis pointing down.
 // Positive pitch : nose up
@@ -14,7 +15,7 @@
 #include <Wire.h>
 #include <FastSerial.h>		// ArduPilot Fast Serial Library
 #include <AP_GPS.h>			// ArduPilot GPS library
-#include <APM_Compass.h>	// ArduPilot Mega Magnetometer Library
+
 
 //**********************************************************************
 //  This section contains USER PARAMETERS !!!
